@@ -129,7 +129,9 @@
                     UIView *underline = [UIView new];
                     underline.layer.cornerRadius = 2;
                     [lines addObject:underline];
+                    [underline setTag:dot.tag];
                     [self addSubview:underline];
+
                     
                     [underline autoSetDimensionsToSize:CGSizeMake(element.dotSize*2, 2)];
                     [underline autoAlignAxis:ALAxisHorizontal toSameAxisOfView:dot withOffset:element.dotSize+4];
